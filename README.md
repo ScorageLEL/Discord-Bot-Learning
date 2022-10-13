@@ -7,3 +7,7 @@ This is a simple Discord bot I'm developing as a first project. I will add funct
 ##Subheader
 
 test
+
+## Local dev
+
+1. Open index.html in your browser.
