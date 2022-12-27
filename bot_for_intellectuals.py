@@ -1,5 +1,12 @@
 import discord
+import os
+import random
+from dotenv import load_dotenv
 from discord.ext import commands
+
+load_dotenv()
+
+token = os.getenv('TOKEN')
 
 intents = discord.Intents.all()
 intents.members = True
@@ -15,4 +22,8 @@ async def on_ready():
 async def hello(ctx):
     await ctx.send('Hello!')
 
-bot.run('MTAyNzAxNjM2MTU1MTA4OTY2NA.GCs8sR.76nTEaTRwUgzfeY7KDqitk12zF5DK2yBdbZttU')
+@bot.command()
+async def roll(ctx):
+    await ctx.send(random.randint(1,6))
+
+bot.run(token)
